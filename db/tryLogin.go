@@ -1,11 +1,12 @@
 package db
 
 import (
-	"GoSimpleApiRest/models"
+	"github.com/devtimx/GoSimpleApiRest/models"
 
 	"golang.org/x/crypto/bcrypt"
 )
 
+/*TryLogin check password with password in the database*/
 func TryLogin(email string, password string) (models.User, bool) {
 	u, find, _ := CheckExistUser(email)
 	if find == false {

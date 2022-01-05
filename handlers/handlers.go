@@ -1,16 +1,18 @@
 package handlers
 
 import (
-	"GoSimpleApiRest/middleware"
-	"GoSimpleApiRest/routers"
 	"log"
 	"net/http"
 	"os"
+
+	"github.com/devtimx/GoSimpleApiRest/middleware"
+	"github.com/devtimx/GoSimpleApiRest/routers"
 
 	"github.com/gorilla/mux"
 	"github.com/rs/cors"
 )
 
+/*Handlers, set port and put the server to listen, enable route functions  */
 func Handlers() {
 	router := mux.NewRouter()
 

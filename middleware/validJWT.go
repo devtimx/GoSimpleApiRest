@@ -1,10 +1,12 @@
 package middleware
 
 import (
-	"GoSimpleApiRest/routers"
 	"net/http"
+
+	"github.com/devtimx/GoSimpleApiRest/routers"
 )
 
+/*ValidJWT validate the token received in the request*/
 func ValidJWT(next http.HandlerFunc) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		_, _, _, err := routers.ProcessToken(r.Header.Get("Autorization"))

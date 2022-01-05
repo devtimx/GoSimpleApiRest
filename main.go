@@ -1,9 +1,10 @@
 package main
 
 import (
-	"GoSimpleApiRest/db"
-	"GoSimpleApiRest/handlers"
 	"log"
+
+	"github.com/devtimx/GoSimpleApiRest/db"
+	"github.com/devtimx/GoSimpleApiRest/handlers"
 )
 
 func main() {

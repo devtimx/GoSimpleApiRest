@@ -2,6 +2,7 @@ package models
 
 import "time"
 
+/*User, the model for the database*/
 type User struct {
 	ID        uint      `json:"id,omitempty"`
 	FirstName string    `json:"firstName,omitempty"`

@@ -1,12 +1,13 @@
 package db
 
 import (
-	"GoSimpleApiRest/models"
 	"context"
 	"time"
+
+	"github.com/devtimx/GoSimpleApiRest/models"
 )
 
-/*InsertRecord */
+/*InsertRecord insert data to database*/
 func InsertRecord(u models.User) (bool, error) {
 	ctx, cancel := context.WithTimeout(context.Background(), 15*time.Second)
 	defer cancel()

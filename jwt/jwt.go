@@ -1,12 +1,14 @@
 package jwt
 
 import (
-	"GoSimpleApiRest/models"
 	"time"
+
+	"github.com/devtimx/GoSimpleApiRest/models"
 
 	jwt "github.com/dgrijalva/jwt-go"
 )
 
+/*MakeJWT make the encode with jwt*/
 func MakeJWT(t models.User) (string, error) {
 	myKey := []byte("GoSimpleApiRest")
 

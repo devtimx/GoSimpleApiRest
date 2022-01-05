@@ -1,12 +1,14 @@
 package routers
 
 import (
-	"GoSimpleApiRest/db"
-	"GoSimpleApiRest/models"
 	"encoding/json"
 	"net/http"
+
+	"github.com/devtimx/GoSimpleApiRest/db"
+	"github.com/devtimx/GoSimpleApiRest/models"
 )
 
+/*SignUp create user records in the database*/
 func SignUp(w http.ResponseWriter, r *http.Request) {
 	var t models.User
 	err := json.NewDecoder(r.Body).Decode(&t)

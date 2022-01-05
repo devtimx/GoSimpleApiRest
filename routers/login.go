@@ -1,14 +1,16 @@
 package routers
 
 import (
-	"GoSimpleApiRest/db"
-	"GoSimpleApiRest/jwt"
-	"GoSimpleApiRest/models"
 	"encoding/json"
 	"net/http"
 	"time"
+
+	"github.com/devtimx/GoSimpleApiRest/db"
+	"github.com/devtimx/GoSimpleApiRest/jwt"
+	"github.com/devtimx/GoSimpleApiRest/models"
 )
 
+/*Login, make the login*/
 func Login(w http.ResponseWriter, r *http.Request) {
 	w.Header().Add("Content-Type", "application/json")
 
