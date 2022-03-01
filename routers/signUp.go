@@ -32,7 +32,7 @@ func SignUp(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	status, err := db.InsertRecord(t)
+	status, err := db.InsertUser(t)
 	if err != nil {
 		http.Error(w, "Error trying to register user "+err.Error(), 400)
 		return

@@ -17,9 +17,9 @@ var Email string
 var IDUser string
 
 /*ProcessToken, processing for extract data of token*/
-func ProcessToken(tk string) (models.Claim, bool, string, error) {
+func ProcessToken(tk string) (models.Claims, bool, string, error) {
 	myKey := []byte("GoSimpleApiRest")
-	claims := &models.Claim{}
+	claims := &models.Claims{}
 
 	splitToken := strings.Split(tk, "Bearer")
 	if len(splitToken) != 2 {

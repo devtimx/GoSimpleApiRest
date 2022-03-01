@@ -17,6 +17,8 @@ func MakeJWT(t models.User) (string, error) {
 		"firstName": t.FirstName,
 		"lastName":  t.LastName,
 		"birthDate": t.BirthDate,
+		"profile":   t.Profile,
+		"status":    t.Status,
 		"id":        t.ID,
 		"exp":       time.Now().Add(time.Hour * 24).Unix(),
 	}
